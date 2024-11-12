@@ -1,14 +1,22 @@
 export default function Hero() {
   return (
-    <section className="w-full bg-[#1E0F2F] text-white pb-16">
-      <div className="container mx-auto px-4 py-20 text-center">
-        <h1 className="text-4xl font-bold mb-6">Welcome to Our Website</h1>
-        <p className="text-lg mb-8 text-gray-300">
-          简单而强大的解决方案
+    <section className="bg-gradient-to-r from-red-700 to-red-900 text-white py-10">
+      <div className="container mx-auto px-4 text-center">
+        <h1 className="text-5xl font-bold mb-4">
+          Free Sprunky Online, Play Sprunki Incredibox Game
+        </h1>
+        <h2 className="text-3xl font-semibold mb-6">
+          Welcome to Sprunki Incredibox Play Sprunky Music Game
+        </h2>
+        <p className="text-xl mb-10">
+          Create, mix, and groove with the spunkiest beats around!
         </p>
-        <button className="bg-white text-[#1E0F2F] px-8 py-3 rounded-lg font-medium hover:bg-gray-100">
-          开始使用
-        </button>
+        <a
+          href="#play-now"
+          className="bg-yellow-400 text-red-900 font-bold text-xl py-4 px-10 rounded-full hover:bg-yellow-300 transition duration-300 inline-block hover:shadow-lg transform hover:-translate-y-1"
+        >
+          <i className="fas fa-play mr-2"></i> Play Sprunki Now
+        </a>
       </div>
     </section>
   );

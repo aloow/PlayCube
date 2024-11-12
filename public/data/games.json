@@ -1,0 +1,132 @@
+{
+  "games": [
+    {
+      "id": "sprunki-retake",
+      "title": "Sprunki Retake",
+      "description": "Experience the new retake!",
+      "rating": 4.5,
+      "imageUrl": "/img/sprunki-retake.png",
+      "link": "https://sprunkiretake.app/"
+    },
+    {
+      "id": "incredibox-mustard",
+      "title": "Incredibox Mustard",
+      "description": "Create mustard beats!",
+      "rating": 4.5,
+      "imageUrl": "/img/incredibox-mustard.png",
+      "link": "./incredibox-mustard/"
+    },
+    {
+      "id": "sprunki-incredibox",
+      "title": "Sprunki Incredibox",
+      "description": "Create spunky beats!",
+      "rating": 4.7,
+      "imageUrl": "/img/sprunki.png",
+      "link": "./"
+    },
+    {
+      "id": "sprunki-oc",
+      "title": "Sprunki OC",
+      "description": "Original characters!",
+      "rating": 4.7,
+      "imageUrl": "/img/sprunki-oc.png",
+      "link": "./sprunki-oc/"
+    },
+    {
+      "id": "dandys-world",
+      "title": "Dandy's World",
+      "description": "Creepy yet captivating!",
+      "rating": 4.6,
+      "imageUrl": "/img/dandys-world.png",
+      "link": "../dandys-world/"
+    },
+    {
+      "id": "sprunked",
+      "title": "Sprunked",
+      "description": "Explore the unique cast!",
+      "rating": 4.3,
+      "imageUrl": "/img/sprunked.jpg",
+      "link": "https://spunky.im/sprunked/"
+    },
+    {
+      "id": "sprunki-phase-4",
+      "title": "Sprunki Phase 4",
+      "description": "Discover the new Sprunki Phase 4!",
+      "rating": 4.6,
+      "imageUrl": "/img/sprunki-phase-4.jpg",
+      "link": "https://spunky.im/sprunki-phase-4/"
+    },
+    {
+      "id": "neesterversal-v3",
+      "title": "Neesterversal v3",
+      "description": "20 Unique Neesters!",
+      "rating": 4.8,
+      "imageUrl": "/img/neesterversal.png",
+      "link": "../neesterversal-v3-incredibox/"
+    },
+    {
+      "id": "sprunki-fnf",
+      "title": "Sprunki FNF",
+      "description": "Friday Night Funkin'!",
+      "rating": 4.3,
+      "imageUrl": "/img/sprunki-fnf.jpg",
+      "link": "./fnf/"
+    },
+    {
+      "id": "sprunki-phase-3",
+      "title": "Sprunki Phase 3",
+      "description": "Discover the new Sprunki Phase 3!",
+      "rating": 4.5,
+      "imageUrl": "/img/sprunki-phase-3.jpg",
+      "link": "https://spunky.im/sprunki-phase-3/"
+    },
+    {
+      "id": "gray-sprunki",
+      "title": "Gray Sprunki",
+      "description": "Cool Cat of Incredibox",
+      "rating": 4.5,
+      "imageUrl": "/img/gray-sprunki.png",
+      "link": "./gray-sprunki/"
+    },
+    {
+      "id": "sprunki-phase-5",
+      "title": "Sprunki Phase 5",
+      "description": "Discover the new Sprunki Phase 5!",
+      "rating": 4.7,
+      "imageUrl": "/img/sprunki-phase-5.jpg",
+      "link": "https://spunky.im/sprunki-phase-5/"
+    },
+    {
+      "id": "sprunki-phase-6",
+      "title": "Sprunki Phase 6",
+      "description": "Discover the new Sprunki Phase 6!",
+      "rating": 4.7,
+      "imageUrl": "/img/sprunki-phase-6.png",
+      "link": "https://spunky.im/sprunki-phase-6/"
+    },
+    {
+      "id": "abgerny",
+      "title": "Abgerny",
+      "description": "New sounds & characters!",
+      "rating": 4.4,
+      "imageUrl": "/img/sprunki-abgerny.png",
+      "link": "https://spunky.im/abgerny/"
+    },
+    {
+      "id": "flappy-bird",
+      "title": "Flappy Bird",
+      "description": "One-tap challenge!",
+      "rating": 4.9,
+      "imageUrl": "/img/flappy-bird.png",
+      "link": "https://spunky.im/flappy-bird/"
+    },
+    {
+      "id": "zombies-sprunki",
+      "title": "Zombies Sprunki",
+      "description": "Create spooky Halloween music!",
+      "rating": 4.7,
+      "imageUrl": "/img/Zombies-Sprunki.png",
+      "link": "https://spunky.im/zombies-sprunki/"
+    }
+  ]
+}

@@ -30,12 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main>
+        <body className="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 font-sans leading-relaxed">
           <Header></Header>
-        {children}
-        <Footer></Footer>
-        </main>
-        
+          {children}
+          <Footer></Footer>
+        </body>
       </body>
     </html>
   );
