@@ -1,21 +1,47 @@
-import Hero from "@/app/ui/Hero";
-import { GameRecommendations } from "@/components/game-recommendations";
-import gamesData from "@/public/data/games.json";
+// app/page.tsx
+"use client";
+
+import NavBar from "@/app/ui/NavBar";
+import GameContent from "@/components/game-content";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return (
-    <main>
-      <Hero />
-      {/* <Feature /> */}
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Game Container */}
-        <div className="lg:w-2/3">{/* Your game iframe content */}</div>
+  const [defaultGame, setDefaultGame] = useState<string>("");
 
-        {/* Recommendations Section */}
-        <div className="lg:w-1/3">
-          <GameRecommendations games={gamesData.games} />
-        </div>
-      </div>
+  useEffect(() => {
+    // 加载游戏数据并设置默认游戏
+    const loadDefaultGame = async () => {
+      try {
+        const response = await fetch("/data/games.json");
+        const data = await response.json();
+        // 设置第一个游戏为默认游戏
+        if (data.games && data.games.length > 0) {
+          setDefaultGame(data.games[0].id);
+        }
+      } catch (error) {
+        console.error("Error loading default game:", error);
+      }
+    };
+
+    loadDefaultGame();
+  }, []);
+
+  return (
+    <main className="min-h-screen bg-gray-50">
+      <NavBar
+        logoUrl="/img/logo.png"
+        onSearchClick={() => {
+          console.log("Search clicked");
+        }}
+      />
+      <GameContent
+        currentGameId={defaultGame}
+        logoUrl="/img/logo.png"
+        onSearchClick={() => {
+          // 处理搜索点击
+          console.log("Search clicked");
+        }}
+      />
     </main>
   );
 }

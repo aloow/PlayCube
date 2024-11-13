@@ -1,5 +1,4 @@
 import Footer from "@/app/ui/Footer";
-import Header from "@/app/ui/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -30,11 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <body className="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 font-sans leading-relaxed">
-          <Header></Header>
-          {children}
-          <Footer></Footer>
-        </body>
+        {children}
+        <Footer logoUrl="/img/logo.png" />
       </body>
     </html>
   );

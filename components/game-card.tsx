@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import type { Game } from "@/types";
 import { Star } from "lucide-react";
 import Image from "next/image";
@@ -12,30 +12,36 @@ interface GameCardProps {
 
 export const GameCard = ({ game }: GameCardProps) => {
   return (
-    <Card className="overflow-hidden transition duration-300 hover:shadow-xl hover:-translate-y-1">
+    <Card className="group relative overflow-hidden rounded-lg transition-all duration-300">
       <Link href={game.link} className="block">
-        <div className="relative h-24 w-full">
+        {/* 游戏图片 */}
+        <div className="relative aspect-video w-full overflow-hidden">
           <Image
             src={game.imageUrl}
             alt={game.title}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
             priority
           />
-        </div>
-        <CardContent className="p-2">
-          <div className="flex justify-between items-center">
-            <h3 className="text-sm font-semibold mb-1 text-red-700">
-              {game.title}
-            </h3>
-            <div className="flex items-center text-yellow-400">
-              <Star className="w-4 h-4 mr-1" />
-              <span>{game.rating.toFixed(1)}</span>
+
+          {/* 悬浮时显示的信息层 */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+          {/* 游戏信息 */}
+          <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold text-white">{game.title}</h3>
+              <div className="flex items-center space-x-1 text-white">
+                <Star className="h-5 w-5 text-[#00E5FF]" />
+                <span className="text-sm">{game.rating.toFixed(1)}</span>
+              </div>
             </div>
           </div>
-          <p className="text-xs text-gray-600">{game.description}</p>
-        </CardContent>
+        </div>
       </Link>
+
+      {/* 卡片边框效果 */}
+      <div className="absolute inset-0 rounded-lg border-2 border-[#9C27B0]/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </Card>
   );
 };
