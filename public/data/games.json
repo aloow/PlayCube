@@ -6,7 +6,7 @@
       "description": "Experience the new retake!",
       "rating": 4.5,
       "imageUrl": "/img/sprunki-retake.png",
-      "link": "https://sprunkiretake.app/"
+      "link": "https://sprunki.org/sprunki-retake.embed"
     },
     {
       "id": "incredibox-mustard",
@@ -14,7 +14,7 @@
       "description": "Create mustard beats!",
       "rating": 4.5,
       "imageUrl": "/img/incredibox-mustard.png",
-      "link": "./incredibox-mustard/"
+      "link": "https://kdata1.com/2024/10/colorbox-mustard/"
     },
     {
       "id": "sprunki-incredibox",
@@ -22,15 +22,7 @@
       "description": "Create spunky beats!",
       "rating": 4.7,
       "imageUrl": "/img/sprunki.png",
-      "link": "./"
-    },
-    {
-      "id": "sprunki-oc",
-      "title": "Sprunki OC",
-      "description": "Original characters!",
-      "rating": 4.7,
-      "imageUrl": "/img/sprunki-oc.png",
-      "link": "./sprunki-oc/"
+      "link": "https://s.sprunkiincredibox.com/game/sprunki/index.html"
     },
     {
       "id": "dandys-world",
@@ -38,7 +30,7 @@
       "description": "Creepy yet captivating!",
       "rating": 4.6,
       "imageUrl": "/img/dandys-world.png",
-      "link": "../dandys-world/"
+      "link": "https://scratch.mit.edu/projects/1075503895/embed"
     },
     {
       "id": "sprunked",
@@ -46,7 +38,7 @@
       "description": "Explore the unique cast!",
       "rating": 4.3,
       "imageUrl": "/img/sprunked.jpg",
-      "link": "https://spunky.im/sprunked/"
+      "link": "https://scratch.mit.edu/projects/1083603932/embed"
     },
     {
       "id": "sprunki-phase-4",
@@ -54,15 +46,7 @@
       "description": "Discover the new Sprunki Phase 4!",
       "rating": 4.6,
       "imageUrl": "/img/sprunki-phase-4.jpg",
-      "link": "https://spunky.im/sprunki-phase-4/"
-    },
-    {
-      "id": "neesterversal-v3",
-      "title": "Neesterversal v3",
-      "description": "20 Unique Neesters!",
-      "rating": 4.8,
-      "imageUrl": "/img/neesterversal.png",
-      "link": "../neesterversal-v3-incredibox/"
+      "link": "https://sprunki.org/sprunki-phase-4.embed"
     },
     {
       "id": "sprunki-fnf",
@@ -70,7 +54,7 @@
       "description": "Friday Night Funkin'!",
       "rating": 4.3,
       "imageUrl": "/img/sprunki-fnf.jpg",
-      "link": "./fnf/"
+      "link": "https://fnf.kdata1.com/2024/sprunki-sprunkin/1/"
     },
     {
       "id": "sprunki-phase-3",
@@ -79,14 +63,6 @@
       "rating": 4.5,
       "imageUrl": "/img/sprunki-phase-3.jpg",
       "link": "https://spunky.im/sprunki-phase-3/"
-    },
-    {
-      "id": "gray-sprunki",
-      "title": "Gray Sprunki",
-      "description": "Cool Cat of Incredibox",
-      "rating": 4.5,
-      "imageUrl": "/img/gray-sprunki.png",
-      "link": "./gray-sprunki/"
     },
     {
       "id": "sprunki-phase-5",
@@ -126,7 +102,7 @@
       "description": "Create spooky Halloween music!",
       "rating": 4.7,
       "imageUrl": "/img/Zombies-Sprunki.png",
-      "link": "https://spunky.im/zombies-sprunki/"
+      "link": "https://kdata1.com/2024/10/zombies-can-sing-too/"
     }
   ]
 }

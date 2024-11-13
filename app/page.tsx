@@ -1,47 +1,51 @@
 // app/page.tsx
 "use client";
 
+import { CTASection } from "@/app/ui/CTA";
+import { FAQSection } from "@/app/ui/Faq";
+import { FeaturesSection } from "@/app/ui/Feature";
 import NavBar from "@/app/ui/NavBar";
-import GameContent from "@/components/game-content";
+import { TestimonialsSection } from "@/app/ui/Testimonials";
+import { GamesGrid } from "@/components/games-grid";
+import GridLoadingSkeleton from "@/components/grid-loading-skeleton";
+import type { Game } from "@/types";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [defaultGame, setDefaultGame] = useState<string>("");
+  const [games, setGames] = useState<Game[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 加载游戏数据并设置默认游戏
-    const loadDefaultGame = async () => {
+    const loadGames = async () => {
       try {
         const response = await fetch("/data/games.json");
         const data = await response.json();
-        // 设置第一个游戏为默认游戏
-        if (data.games && data.games.length > 0) {
-          setDefaultGame(data.games[0].id);
-        }
+        setGames(data.games || []);
+        setLoading(false);
       } catch (error) {
-        console.error("Error loading default game:", error);
+        console.error("Error loading games:", error);
+        setLoading(false);
       }
     };
 
-    loadDefaultGame();
+    loadGames();
   }, []);
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-white">
       <NavBar
         logoUrl="/img/logo.png"
         onSearchClick={() => {
           console.log("Search clicked");
         }}
       />
-      <GameContent
-        currentGameId={defaultGame}
-        logoUrl="/img/logo.png"
-        onSearchClick={() => {
-          // 处理搜索点击
-          console.log("Search clicked");
-        }}
-      />
+      <div className="pt-8">
+        {loading ? <GridLoadingSkeleton /> : <GamesGrid games={games} />}
+      </div>
+      <FeaturesSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <CTASection />
     </main>
   );
 }

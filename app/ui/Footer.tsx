@@ -65,13 +65,18 @@ const Footer: React.FC<FooterProps> = ({ logoUrl }) => {
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold text-[#1A237E]">Support</h3>
             <ul className="mt-4 space-y-2">
-              {["Help Center", "Terms", "Privacy", "FAQ"].map((item) => (
-                <li key={item}>
+              {[
+                { name: "Help Center", path: "/help-center" },
+                { name: "Terms", path: "/termsservice" },
+                { name: "Privacy", path: "/privacypolicy" },
+                { name: "FAQ", path: "/faq" },
+              ].map((item) => (
+                <li key={item.name}>
                   <Link
-                    href={`/${item.toLowerCase().replace(" ", "-")}`}
+                    href={item.path}
                     className="text-gray-600 hover:text-[#00E5FF] hover:underline"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}

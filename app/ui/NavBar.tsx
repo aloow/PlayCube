@@ -3,7 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Home, LogIn, Menu, Search } from "lucide-react";
+import { FileText, Home, Menu, Search, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -55,6 +55,26 @@ const NavBar: React.FC<NavBarProps> = ({ logoUrl, onSearchClick }) => {
                 <Search className="mr-2 h-4 w-4" />
                 Search
               </Button>
+              <Button
+                variant="ghost"
+                className="text-[#1A237E] hover:bg-[#00E5FF]/10 hover:text-[#1A237E]"
+                asChild
+              >
+                <Link href="/termsservice">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Terms
+                </Link>
+              </Button>
+              <Button
+                variant="ghost"
+                className="text-[#1A237E] hover:bg-[#00E5FF]/10 hover:text-[#1A237E]"
+                asChild
+              >
+                <Link href="/privacypolicy">
+                  <Shield className="mr-2 h-4 w-4" />
+                  Privacy
+                </Link>
+              </Button>
             </div>
           </div>
 
@@ -68,18 +88,6 @@ const NavBar: React.FC<NavBarProps> = ({ logoUrl, onSearchClick }) => {
               onClick={onSearchClick}
             >
               <Search className="h-5 w-5 text-[#1A237E]" />
-            </Button>
-
-            {/* 登录/注册按钮 */}
-            <Button
-              variant="ghost"
-              className="hidden border-2 border-[#9C27B0]/60 text-[#1A237E] hover:bg-[#9C27B0]/10 hover:text-[#1A237E] sm:inline-flex"
-            >
-              <LogIn className="mr-2 h-4 w-4" />
-              Login
-            </Button>
-            <Button className="hidden bg-[#00E5FF] text-white hover:bg-[#00E5FF]/90 hover:shadow-[0_0_10px_rgba(0,229,255,0.5)] sm:inline-flex">
-              Sign Up
             </Button>
 
             {/* 移动端菜单 */}
@@ -119,12 +127,22 @@ const NavBar: React.FC<NavBarProps> = ({ logoUrl, onSearchClick }) => {
                   <Button
                     variant="ghost"
                     className="justify-start text-[#1A237E] hover:bg-[#00E5FF]/10"
+                    asChild
                   >
-                    <LogIn className="mr-2 h-4 w-4" />
-                    Login
+                    <Link href="/termsservice">
+                      <FileText className="mr-2 h-4 w-4" />
+                      Terms
+                    </Link>
                   </Button>
-                  <Button className="bg-[#00E5FF] text-white hover:bg-[#00E5FF]/90 hover:shadow-[0_0_10px_rgba(0,229,255,0.5)]">
-                    Sign Up
+                  <Button
+                    variant="ghost"
+                    className="justify-start text-[#1A237E] hover:bg-[#00E5FF]/10"
+                    asChild
+                  >
+                    <Link href="/privacypolicy">
+                      <Shield className="mr-2 h-4 w-4" />
+                      Privacy
+                    </Link>
                   </Button>
                 </div>
               </SheetContent>
